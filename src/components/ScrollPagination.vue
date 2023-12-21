@@ -53,12 +53,11 @@ function removeEventListeners() {
 }
 
 function onScroll() {
-	const height = document.body.offsetHeight;
+	const scrollHeight = document.documentElement.scrollHeight;
 	const screenHeight = window.innerHeight;
-
 	const scrolled = window.scrollY;
 
-	const threshold = height - screenHeight / THRESHOLD_PART;
+	const threshold = scrollHeight - screenHeight / THRESHOLD_PART;
 	const position = scrolled + screenHeight;
 
 	if (position >= threshold) {
@@ -67,10 +66,13 @@ function onScroll() {
 }
 
 function onWheel() {
-	const scrollHeight = document.body.scrollHeight;
+	const scrollHeight = document.documentElement.scrollHeight;
 	const screenHeight = window.innerHeight;
+	const scrolled = window.scrollY;
 
-	if (screenHeight >= scrollHeight) {
+	const threshold = scrollHeight - screenHeight;
+
+	if (scrolled >= threshold) {
 		emit('update');
 	}
 }
