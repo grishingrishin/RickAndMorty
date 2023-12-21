@@ -1,14 +1,16 @@
 export function throttle(fn, delay = 250) {
-	let timer = null;
+	let wait = false;
 
-	return function perform(...args) {
-		if (timer) return;
+	return (...args) => {
+		if (wait) {
+			return;
+		}
 
-		timer = setTimeout(() => {
-			fn(...args);
+		fn(...args);
+		wait = true;
 
-			clearTimeout(timer);
-			timer = null;
+		setTimeout(() => {
+			wait = false;
 		}, delay);
 	};
 }
