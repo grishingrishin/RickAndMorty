@@ -6,7 +6,7 @@ import { characterDto } from '@/libs/dto';
 import CharacterCard from '@/components/CharacterCard.vue';
 
 describe('CharacterCard', () => {
-	const mockObj = {
+	const stubCharacter = {
 		id: 1,
 		picture: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
 		name: 'Rick Sanchez',
@@ -21,7 +21,7 @@ describe('CharacterCard', () => {
 		const wrapper = mount(CharacterCard, {
 			props: {
 				data: characterDto({
-					...mockObj,
+					...stubCharacter,
 					episode: [],
 				}),
 			},
@@ -35,7 +35,7 @@ describe('CharacterCard', () => {
 
 		const wrapper = mount(CharacterCard, {
 			props: {
-				data: characterDto(mockObj),
+				data: characterDto(stubCharacter),
 			},
 		});
 

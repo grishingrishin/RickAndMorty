@@ -4,7 +4,7 @@ import { mount } from '@vue/test-utils';
 import CharacterList from '@/components/CharacterList.vue';
 
 describe('CharacterList', () => {
-	const mockArr = [
+	const stubCharacter = [
 		[
 			{
 				id: 1,
@@ -46,7 +46,7 @@ describe('CharacterList', () => {
 
 		const wrapper = mount(CharacterList, {
 			props: {
-				list: mockArr,
+				list: stubCharacter,
 			},
 			shallow: true,
 		});
