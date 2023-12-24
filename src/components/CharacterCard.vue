@@ -23,9 +23,15 @@ const episodeNumbers = computed(() =>
 			/>
 		</div>
 		<div class="character-card__body">
-			<div class="character-card__name">{{ data.name }}</div>
-			<div class="character-card__status">{{ data.status }}</div>
-			<div class="character-card__episodes">Episodes: {{ episodeNumbers }}</div>
+			<div class="character-card__name">
+				{{ data.name }}
+			</div>
+			<div class="character-card__status">
+				{{ data.status }}
+			</div>
+			<template v-if="episodeNumbers.length">
+				<div class="character-card__episodes">Episodes: {{ episodeNumbers }}</div>
+			</template>
 		</div>
 	</div>
 </template>
