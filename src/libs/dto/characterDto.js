@@ -1,4 +1,4 @@
-export function cardDto(data = {}) {
+export function characterDto(data = {}) {
 	return {
 		id: data.id ?? null,
 		picture: data.image ?? '',

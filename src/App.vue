@@ -3,7 +3,7 @@ import { ref, computed, onBeforeMount, onMounted } from 'vue';
 
 import { LOCAL_STORAGE_FILTER, API_URL } from '@/utils/constants';
 import { formatStr, injectParams } from '@/utils/helpers';
-import { cardDto } from '@/libs/dto';
+import { characterDto } from '@/libs/dto';
 
 import ScrollPagination from '@/components/ScrollPagination.vue';
 import CharacterFilter from '@/components/CharacterFilter.vue';
@@ -70,7 +70,7 @@ async function fetchCharacters() {
 	if (data.info.next) curPage.value += 1;
 	else isLastPage.value = true;
 
-	characters.value = [...characters.value, ...data.results.map(cardDto)];
+	characters.value = [...characters.value, ...data.results.map(characterDto)];
 
 	isFetchingPage.value = false;
 }

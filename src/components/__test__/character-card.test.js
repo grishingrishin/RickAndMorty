@@ -1,7 +1,7 @@
 import { describe, test, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
 
-import { cardDto } from '@/libs/dto';
+import { characterDto } from '@/libs/dto';
 
 import CharacterCard from '@/components/CharacterCard.vue';
 
@@ -11,7 +11,7 @@ describe('The character card component', () => {
 
 		const wrapper = mount(CharacterCard, {
 			props: {
-				data: cardDto(),
+				data: characterDto(),
 			},
 		});
 
@@ -33,7 +33,7 @@ describe('The character card component', () => {
 
 		const wrapper = mount(CharacterCard, {
 			props: {
-				data: cardDto({
+				data: characterDto({
 					episode,
 				}),
 			},
