@@ -5,7 +5,7 @@ import { characterDto } from '@/libs/dto';
 
 import CharacterCard from '@/components/CharacterCard.vue';
 
-describe('The character card component', () => {
+describe('CharacterCard', () => {
 	test('Mounted component without episodes', () => {
 		expect(CharacterCard).toBeTruthy();
 

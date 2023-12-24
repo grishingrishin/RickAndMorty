@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`The character card component > Mounted component with episodes 1`] = `
+exports[`CharacterCard > Mounted component with episodes 1`] = `
 "<div class="character-card">
   <div class="character-card__figure"><img src="" alt="Name: ()" class="character-card__img"></div>
   <div class="character-card__body">
@@ -11,7 +11,7 @@ exports[`The character card component > Mounted component with episodes 1`] = `
 </div>"
 `;
 
-exports[`The character card component > Mounted component without episodes 1`] = `
+exports[`CharacterCard > Mounted component without episodes 1`] = `
 "<div class="character-card">
   <div class="character-card__figure"><img src="" alt="Name: ()" class="character-card__img"></div>
   <div class="character-card__body">
