@@ -1,5 +1,6 @@
 export function cardDto(data = {}) {
 	return {
+		id: data.id ?? null,
 		picture: data.image ?? '',
 		name: data.name ?? '',
 		status: data.status ?? '',
