@@ -88,15 +88,14 @@ async function fetchCharacters() {
 			</div>
 			<div class="app__body">
 				<template v-if="filtersApplied">
-					<template v-if="filteredCharacters.length">
-						<CharacterList :characters="filteredCharacters" />
-					</template>
-					<template v-else>
-						<div class="app__text">Ooops... characters is not't defined</div>
-					</template>
+					<CharacterList :list="filteredCharacters">
+						<template v-if="!filteredCharacters.length" #append>
+							Ooops... characters is not't defined
+						</template>
+					</CharacterList>
 				</template>
 				<template v-else>
-					<CharacterList :characters="characters" />
+					<CharacterList :list="characters" />
 				</template>
 			</div>
 		</ScrollPagination>
