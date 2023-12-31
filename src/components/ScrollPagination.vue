@@ -1,5 +1,5 @@
 <script setup>
-import { defineEmits, defineProps, onMounted, onUnmounted } from 'vue';
+import { onMounted, onUnmounted } from 'vue';
 
 import { throttle } from '@/utils/helpers';
 

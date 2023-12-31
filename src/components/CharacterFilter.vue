@@ -1,5 +1,5 @@
 <script setup>
-import { shallowReactive, defineProps, defineEmits, computed, watch } from 'vue';
+import { shallowReactive, computed, watch } from 'vue';
 
 import { filterDto } from '@/libs/dto';
 
