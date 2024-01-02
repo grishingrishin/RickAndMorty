@@ -49,7 +49,7 @@ function prepare(params) {
 
 function reset() {
 	clear();
-	emit('clear', null);
+	emit('clear');
 }
 
 function clear() {
