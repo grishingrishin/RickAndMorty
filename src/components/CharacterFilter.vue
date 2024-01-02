@@ -66,7 +66,11 @@ function clear() {
 <template>
 	<div class="character-filter">
 		<div class="character-filter__filter">
-			<select v-model="filters.status" class="character-filter__select">
+			<select
+				v-model="filters.status"
+				class="character-filter__select"
+				data-filter="status"
+			>
 				<option value="">status</option>
 				<option value="alive">alive</option>
 				<option value="dead">dead</option>
@@ -74,7 +78,11 @@ function clear() {
 			</select>
 		</div>
 		<div class="character-filter__filter">
-			<select v-model="filters.gender" class="character-filter__select">
+			<select
+				v-model="filters.gender"
+				class="character-filter__select"
+				data-filter="gender"
+			>
 				<option value="">gender</option>
 				<option value="female">female</option>
 				<option value="male">male</option>
@@ -85,12 +93,22 @@ function clear() {
 		<template v-if="isActive">
 			<div class="character-filter__actions">
 				<div class="character-filter__action">
-					<button type="button" class="character-filter__btn" @click="apply">
+					<button
+						type="button"
+						class="character-filter__btn"
+						data-filter="apply"
+						@click="apply"
+					>
 						apply
 					</button>
 				</div>
 				<div class="character-filter__action">
-					<button type="button" class="character-filter__btn" @click="reset">
+					<button
+						type="button"
+						class="character-filter__btn"
+						data-filter="clear"
+						@click="reset"
+					>
 						clear
 					</button>
 				</div>
