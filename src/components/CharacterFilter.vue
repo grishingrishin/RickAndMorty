@@ -12,10 +12,10 @@ const props = defineProps({
 
 const emit = defineEmits(['apply', 'clear']);
 
-const filters = shallowReactive(init());
+const values = shallowReactive(init());
 
 const isActive = computed(() => {
-	return Object.keys(filters).some(key => filters[key]);
+	return Object.keys(values).some(key => values[key]);
 });
 
 const isAutoClear = computed(() => {
@@ -33,7 +33,7 @@ function init() {
 }
 
 function apply() {
-	const preparedValues = prepare(filters);
+	const preparedValues = prepare(values);
 	emit('apply', preparedValues);
 }
 
@@ -56,8 +56,8 @@ function clear() {
 	const defParams = filterDto();
 
 	Object.keys(defParams).forEach(key => {
-		if (Object.hasOwn(filters, key)) {
-			filters[key] = defParams[key];
+		if (Object.hasOwn(values, key)) {
+			values[key] = defParams[key];
 		}
 	});
 }
@@ -67,7 +67,7 @@ function clear() {
 	<div class="character-filter">
 		<div class="character-filter__filter">
 			<select
-				v-model="filters.status"
+				v-model="values.status"
 				class="character-filter__select"
 				data-filter="status"
 			>
@@ -79,7 +79,7 @@ function clear() {
 		</div>
 		<div class="character-filter__filter">
 			<select
-				v-model="filters.gender"
+				v-model="values.gender"
 				class="character-filter__select"
 				data-filter="gender"
 			>
