@@ -1,0 +1,124 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CharacterFilter > Apply filters 1`] = `
+"<div class="character-filter">
+  <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+      <option value="">status</option>
+      <option value="alive">alive</option>
+      <option value="dead">dead</option>
+      <option value="unknown">unknown</option>
+    </select></div>
+  <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+      <option value="">gender</option>
+      <option value="female">female</option>
+      <option value="male">male</option>
+      <option value="genderless">genderless</option>
+      <option value="unknown">unknown</option>
+    </select></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`CharacterFilter > Apply filters 2`] = `
+"<div class="character-filter">
+  <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+      <option value="">status</option>
+      <option value="alive">alive</option>
+      <option value="dead">dead</option>
+      <option value="unknown">unknown</option>
+    </select></div>
+  <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+      <option value="">gender</option>
+      <option value="female">female</option>
+      <option value="male">male</option>
+      <option value="genderless">genderless</option>
+      <option value="unknown">unknown</option>
+    </select></div>
+  <div class="character-filter__actions">
+    <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="apply"> apply </button></div>
+    <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="clear"> clear </button></div>
+  </div>
+</div>"
+`;
+
+exports[`CharacterFilter > Clear filters 1`] = `
+"<div class="character-filter">
+  <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+      <option value="">status</option>
+      <option value="alive">alive</option>
+      <option value="dead">dead</option>
+      <option value="unknown">unknown</option>
+    </select></div>
+  <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+      <option value="">gender</option>
+      <option value="female">female</option>
+      <option value="male">male</option>
+      <option value="genderless">genderless</option>
+      <option value="unknown">unknown</option>
+    </select></div>
+  <div class="character-filter__actions">
+    <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="apply"> apply </button></div>
+    <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="clear"> clear </button></div>
+  </div>
+</div>"
+`;
+
+exports[`CharacterFilter > Clear filters 2`] = `
+"<div class="character-filter">
+  <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+      <option value="">status</option>
+      <option value="alive">alive</option>
+      <option value="dead">dead</option>
+      <option value="unknown">unknown</option>
+    </select></div>
+  <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+      <option value="">gender</option>
+      <option value="female">female</option>
+      <option value="male">male</option>
+      <option value="genderless">genderless</option>
+      <option value="unknown">unknown</option>
+    </select></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`CharacterFilter > Mounted component with initial state 1`] = `
+"<div class="character-filter">
+  <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+      <option value="">status</option>
+      <option value="alive">alive</option>
+      <option value="dead">dead</option>
+      <option value="unknown">unknown</option>
+    </select></div>
+  <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+      <option value="">gender</option>
+      <option value="female">female</option>
+      <option value="male">male</option>
+      <option value="genderless">genderless</option>
+      <option value="unknown">unknown</option>
+    </select></div>
+  <div class="character-filter__actions">
+    <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="apply"> apply </button></div>
+    <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="clear"> clear </button></div>
+  </div>
+</div>"
+`;
+
+exports[`CharacterFilter > Mounted pure component 1`] = `
+"<div class="character-filter">
+  <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+      <option value="">status</option>
+      <option value="alive">alive</option>
+      <option value="dead">dead</option>
+      <option value="unknown">unknown</option>
+    </select></div>
+  <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+      <option value="">gender</option>
+      <option value="female">female</option>
+      <option value="male">male</option>
+      <option value="genderless">genderless</option>
+      <option value="unknown">unknown</option>
+    </select></div>
+  <!--v-if-->
+</div>"
+`;
