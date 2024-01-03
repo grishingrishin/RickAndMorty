@@ -1,6 +1,8 @@
 import { describe, test, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
 
+import { genEvent } from '@/tests/utils';
+
 import ScrollPagination from '@/components/ScrollPagination.vue';
 
 describe('ScrollPagination', () => {
@@ -39,9 +41,4 @@ describe('ScrollPagination', () => {
 
 		expect(wrapper.emitted()).not.toHaveProperty(EMITTING_EVENTS.update);
 	});
-
-	function genEvent(evtName, params) {
-		const customEvent = new CustomEvent(evtName, params);
-		window.dispatchEvent(customEvent);
-	}
 });
