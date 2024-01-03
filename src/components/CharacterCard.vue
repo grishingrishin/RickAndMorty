@@ -8,9 +8,24 @@ const props = defineProps({
 	},
 });
 
-const episodeNumbers = computed(() =>
-	props.data.episodes.map(episode => episode.replace(/\D/gi, '')).join(',')
-);
+// prettier-ignore
+const episodeNumbers = computed(() => {
+	const {
+		data: {
+			episodes
+		}
+	} = props;
+
+	if (!Array.isArray(episodes)) {
+		return [];
+	}
+
+	const res = episodes
+		.map(episode => episode.replace(/\D/gi, ''))
+		.join(',');
+
+	return res;
+});
 </script>
 
 <template>
