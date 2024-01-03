@@ -1,5 +1,16 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`CharacterCard > Mounted component pure component 1`] = `
+"<div class="character-card">
+  <div class="character-card__figure"><img alt="Name: (undefined)" class="character-card__img"></div>
+  <div class="character-card__body">
+    <div class="character-card__name"></div>
+    <div class="character-card__status"></div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
 exports[`CharacterCard > Mounted component with episodes 1`] = `
 "<div class="character-card">
   <div class="character-card__figure"><img src="" alt="Name: (Rick Sanchez)" class="character-card__img"></div>

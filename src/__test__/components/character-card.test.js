@@ -15,6 +15,14 @@ describe('CharacterCard', () => {
 		episode: ['https://rickandmortyapi.com/api/episode/1'],
 	};
 
+	test('Mounted component pure component', () => {
+		expect(CharacterCard).toBeTruthy();
+
+		const wrapper = mount(CharacterCard);
+
+		expect(wrapper.html()).toMatchSnapshot();
+	});
+
 	test('Mounted component without episodes', () => {
 		expect(CharacterCard).toBeTruthy();
 
