@@ -74,6 +74,8 @@ describe('CharacterFilter', () => {
 			.find('[data-filter=clear]')
 			.trigger('click');
 
+		expect(wrapper.emitted()).toHaveProperty('clear');
+
 		expect(wrapper.html()).toMatchSnapshot();
 	});
 });
