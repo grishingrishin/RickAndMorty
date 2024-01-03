@@ -6,7 +6,7 @@ import ScrollPagination from '@/components/ScrollPagination.vue';
 describe('ScrollPagination', () => {
 	const EMITTING_EVENTS = {
 		update: 'update',
-	}
+	};
 
 	test('Mounted pure component', () => {
 		expect(ScrollPagination).toBeTruthy();

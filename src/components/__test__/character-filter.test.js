@@ -8,7 +8,7 @@ describe('CharacterFilter', () => {
 	const EMITTING_EVENTS = {
 		apply: 'apply',
 		clear: 'clear',
-	}
+	};
 
 	const stubValues = filterDto({
 		status: 'alive',
