@@ -5,6 +5,11 @@ import { filterDto } from '@/libs/dto';
 import CharacterFilter from '@/components/CharacterFilter.vue';
 
 describe('CharacterFilter', () => {
+	const EMITTING_EVENTS = {
+		apply: 'apply',
+		clear: 'clear',
+	}
+
 	const stubValues = filterDto({
 		status: 'alive',
 		gender: 'female',
@@ -33,7 +38,7 @@ describe('CharacterFilter', () => {
 	});
 
 	// prettier-ignore
-	test('Apply filters', async () => {
+	test('Applying selected filters', async () => {
 		expect(CharacterFilter).toBeTruthy();
 
 		const wrapper = mount(CharacterFilter);
@@ -52,12 +57,12 @@ describe('CharacterFilter', () => {
 
 		expect(wrapper.html()).toMatchSnapshot();
 
-		const [appliedValues] = wrapper.emitted('apply');
+		const [appliedValues] = wrapper.emitted(EMITTING_EVENTS.apply);
 		expect(appliedValues).toEqual([{ ...stubValues }]);
 	});
 
 	// prettier-ignore
-	test('Clear filters', async () => {
+	test('Clearing previously selected filters', async () => {
 		expect(CharacterFilter).toBeTruthy();
 
 		const wrapper = mount(CharacterFilter, {
@@ -74,7 +79,7 @@ describe('CharacterFilter', () => {
 			.find('[data-filter=clear]')
 			.trigger('click');
 
-		expect(wrapper.emitted()).toHaveProperty('clear');
+		expect(wrapper.emitted()).toHaveProperty(EMITTING_EVENTS.clear);
 
 		expect(wrapper.html()).toMatchSnapshot();
 	});

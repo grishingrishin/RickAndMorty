@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`CharacterFilter > Apply filters 1`] = `
+exports[`CharacterFilter > Applying selected filters 1`] = `
 "<div class="character-filter">
   <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
       <option value="">status</option>
@@ -19,7 +19,7 @@ exports[`CharacterFilter > Apply filters 1`] = `
 </div>"
 `;
 
-exports[`CharacterFilter > Apply filters 2`] = `
+exports[`CharacterFilter > Applying selected filters 2`] = `
 "<div class="character-filter">
   <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
       <option value="">status</option>
@@ -41,7 +41,7 @@ exports[`CharacterFilter > Apply filters 2`] = `
 </div>"
 `;
 
-exports[`CharacterFilter > Clear filters 1`] = `
+exports[`CharacterFilter > Clearing previously selected filters 1`] = `
 "<div class="character-filter">
   <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
       <option value="">status</option>
@@ -63,7 +63,7 @@ exports[`CharacterFilter > Clear filters 1`] = `
 </div>"
 `;
 
-exports[`CharacterFilter > Clear filters 2`] = `
+exports[`CharacterFilter > Clearing previously selected filters 2`] = `
 "<div class="character-filter">
   <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
       <option value="">status</option>

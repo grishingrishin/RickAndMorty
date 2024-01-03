@@ -4,6 +4,10 @@ import { mount } from '@vue/test-utils';
 import ScrollPagination from '@/components/ScrollPagination.vue';
 
 describe('ScrollPagination', () => {
+	const EMITTING_EVENTS = {
+		update: 'update',
+	}
+
 	test('Mounted pure component', () => {
 		expect(ScrollPagination).toBeTruthy();
 
@@ -19,7 +23,7 @@ describe('ScrollPagination', () => {
 
 		genEvent('scroll');
 
-		expect(wrapper.emitted()).toHaveProperty('update');
+		expect(wrapper.emitted()).toHaveProperty(EMITTING_EVENTS.update);
 	});
 
 	test('Disabled emitting an update event', () => {
@@ -33,7 +37,7 @@ describe('ScrollPagination', () => {
 
 		genEvent('scroll');
 
-		expect(wrapper.emitted()).not.toHaveProperty('update');
+		expect(wrapper.emitted()).not.toHaveProperty(EMITTING_EVENTS.update);
 	});
 
 	function genEvent(evtName, params) {
