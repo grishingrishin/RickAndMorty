@@ -1,0 +1,676 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > Applying selected filters (with characters) 1`] = `
+"<div class="app">
+  <div class="app__top">
+    <div class="character-filter">
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+          <option value="">status</option>
+          <option value="alive">alive</option>
+          <option value="dead">dead</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+          <option value="">gender</option>
+          <option value="female">female</option>
+          <option value="male">male</option>
+          <option value="genderless">genderless</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div class="app__body">
+    <div class="character-list">
+      <ul class="character-list__grid">
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Name: (Rick Sanchez)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Rick Sanchez</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 1</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" alt="Name: (Morty Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Morty Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 1,2,3</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt="Name: (Summer Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Summer Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/4.jpeg" alt="Name: (Beth Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Beth Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/5.jpeg" alt="Name: (Jerry Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Jerry Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`App > Applying selected filters (with characters) 2`] = `
+"<div class="app">
+  <div class="app__top">
+    <div class="character-filter">
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+          <option value="">status</option>
+          <option value="alive">alive</option>
+          <option value="dead">dead</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+          <option value="">gender</option>
+          <option value="female">female</option>
+          <option value="male">male</option>
+          <option value="genderless">genderless</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__actions">
+        <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="apply"> apply </button></div>
+        <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="clear"> clear </button></div>
+      </div>
+    </div>
+  </div>
+  <div class="app__body">
+    <div class="character-list">
+      <ul class="character-list__grid">
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt="Name: (Summer Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Summer Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/4.jpeg" alt="Name: (Beth Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Beth Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`App > Applying selected filters (without characters) 1`] = `
+"<div class="app">
+  <div class="app__top">
+    <div class="character-filter">
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+          <option value="">status</option>
+          <option value="alive">alive</option>
+          <option value="dead">dead</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+          <option value="">gender</option>
+          <option value="female">female</option>
+          <option value="male">male</option>
+          <option value="genderless">genderless</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__actions">
+        <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="apply"> apply </button></div>
+        <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="clear"> clear </button></div>
+      </div>
+    </div>
+  </div>
+  <div class="app__body">
+    <div class="character-list">
+      <ul class="character-list__grid">
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt="Name: (Summer Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Summer Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/4.jpeg" alt="Name: (Beth Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Beth Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`App > Applying selected filters (without characters) 2`] = `
+"<div class="app">
+  <div class="app__top">
+    <div class="character-filter">
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+          <option value="">status</option>
+          <option value="alive">alive</option>
+          <option value="dead">dead</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+          <option value="">gender</option>
+          <option value="female">female</option>
+          <option value="male">male</option>
+          <option value="genderless">genderless</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__actions">
+        <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="apply"> apply </button></div>
+        <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="clear"> clear </button></div>
+      </div>
+    </div>
+  </div>
+  <div class="app__body">
+    <div class="character-list">
+      <!--v-if-->
+      <div class="character-list__append"> Ooops... characters is not't defined </div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`App > Clear previously applied filters 1`] = `
+"<div class="app">
+  <div class="app__top">
+    <div class="character-filter">
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+          <option value="">status</option>
+          <option value="alive">alive</option>
+          <option value="dead">dead</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+          <option value="">gender</option>
+          <option value="female">female</option>
+          <option value="male">male</option>
+          <option value="genderless">genderless</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__actions">
+        <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="apply"> apply </button></div>
+        <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="clear"> clear </button></div>
+      </div>
+    </div>
+  </div>
+  <div class="app__body">
+    <div class="character-list">
+      <ul class="character-list__grid">
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt="Name: (Summer Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Summer Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/4.jpeg" alt="Name: (Beth Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Beth Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`App > Clear previously applied filters 2`] = `
+"<div class="app">
+  <div class="app__top">
+    <div class="character-filter">
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+          <option value="">status</option>
+          <option value="alive">alive</option>
+          <option value="dead">dead</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+          <option value="">gender</option>
+          <option value="female">female</option>
+          <option value="male">male</option>
+          <option value="genderless">genderless</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div class="app__body">
+    <div class="character-list">
+      <ul class="character-list__grid">
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Name: (Rick Sanchez)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Rick Sanchez</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 1</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" alt="Name: (Morty Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Morty Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 1,2,3</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt="Name: (Summer Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Summer Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/4.jpeg" alt="Name: (Beth Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Beth Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/5.jpeg" alt="Name: (Jerry Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Jerry Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`App > Fetch characters after scroll 1`] = `
+"<div class="app">
+  <div class="app__top">
+    <div class="character-filter">
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+          <option value="">status</option>
+          <option value="alive">alive</option>
+          <option value="dead">dead</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+          <option value="">gender</option>
+          <option value="female">female</option>
+          <option value="male">male</option>
+          <option value="genderless">genderless</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div class="app__body">
+    <div class="character-list">
+      <ul class="character-list__grid">
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Name: (Rick Sanchez)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Rick Sanchez</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 1</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" alt="Name: (Morty Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Morty Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 1,2,3</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt="Name: (Summer Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Summer Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/4.jpeg" alt="Name: (Beth Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Beth Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/5.jpeg" alt="Name: (Jerry Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Jerry Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Name: (Rick Sanchez)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Rick Sanchez</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 1</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" alt="Name: (Morty Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Morty Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 1,2,3</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt="Name: (Summer Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Summer Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/4.jpeg" alt="Name: (Beth Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Beth Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/5.jpeg" alt="Name: (Jerry Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Jerry Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`App > Mounted component pure component 1`] = `
+"<div class="app">
+  <div class="app__top">
+    <div class="character-filter">
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+          <option value="">status</option>
+          <option value="alive">alive</option>
+          <option value="dead">dead</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+          <option value="">gender</option>
+          <option value="female">female</option>
+          <option value="male">male</option>
+          <option value="genderless">genderless</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div class="app__body">
+    <div class="character-list">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`App > Mounted component with characters 1`] = `
+"<div class="app">
+  <div class="app__top">
+    <div class="character-filter">
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+          <option value="">status</option>
+          <option value="alive">alive</option>
+          <option value="dead">dead</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+          <option value="">gender</option>
+          <option value="female">female</option>
+          <option value="male">male</option>
+          <option value="genderless">genderless</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div class="app__body">
+    <div class="character-list">
+      <ul class="character-list__grid">
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Name: (Rick Sanchez)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Rick Sanchez</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 1</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" alt="Name: (Morty Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Morty Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 1,2,3</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt="Name: (Summer Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Summer Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/4.jpeg" alt="Name: (Beth Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Beth Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/5.jpeg" alt="Name: (Jerry Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Jerry Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`App > Restore previously applied filters (with available values) 1`] = `
+"<div class="app">
+  <div class="app__top">
+    <div class="character-filter">
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+          <option value="">status</option>
+          <option value="alive">alive</option>
+          <option value="dead">dead</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+          <option value="">gender</option>
+          <option value="female">female</option>
+          <option value="male">male</option>
+          <option value="genderless">genderless</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__actions">
+        <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="apply"> apply </button></div>
+        <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="clear"> clear </button></div>
+      </div>
+    </div>
+  </div>
+  <div class="app__body">
+    <div class="character-list">
+      <ul class="character-list__grid">
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt="Name: (Summer Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Summer Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+        <li class="character-list__cell">
+          <div class="character-card">
+            <div class="character-card__figure"><img src="https://rickandmortyapi.com/api/character/avatar/4.jpeg" alt="Name: (Beth Smith)" class="character-card__img"></div>
+            <div class="character-card__body">
+              <div class="character-card__name">Beth Smith</div>
+              <div class="character-card__status">Alive</div>
+              <div class="character-card__episodes">Episodes: 6,7,8</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`App > Restore previously applied filters (with unavaliable values) 1`] = `
+"<div class="app">
+  <div class="app__top">
+    <div class="character-filter">
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="status">
+          <option value="">status</option>
+          <option value="alive">alive</option>
+          <option value="dead">dead</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__filter"><select class="character-filter__select" data-filter="gender">
+          <option value="">gender</option>
+          <option value="female">female</option>
+          <option value="male">male</option>
+          <option value="genderless">genderless</option>
+          <option value="unknown">unknown</option>
+        </select></div>
+      <div class="character-filter__actions">
+        <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="apply"> apply </button></div>
+        <div class="character-filter__action"><button type="button" class="character-filter__btn" data-filter="clear"> clear </button></div>
+      </div>
+    </div>
+  </div>
+  <div class="app__body">
+    <div class="character-list">
+      <!--v-if-->
+      <div class="character-list__append"> Ooops... characters is not't defined </div>
+    </div>
+  </div>
+</div>"
+`;
