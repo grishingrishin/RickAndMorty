@@ -21,7 +21,8 @@
     "noFallthroughCasesInSwitch": true,
 
     /* types */
-    "types": ["node"]
+    "types": ["node"],
+    "paths": { "@/*": ["./src/*"] }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/main.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
