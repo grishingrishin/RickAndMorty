@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { shallowReactive, computed, watch } from 'vue';
 
 import { filterDto } from '@/libs/dto';

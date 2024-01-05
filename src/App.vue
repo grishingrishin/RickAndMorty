@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref, computed, onBeforeMount, onMounted } from 'vue';
 
 import { LOCAL_STORAGE_FILTER, API_URL } from '@/utils/constants';
