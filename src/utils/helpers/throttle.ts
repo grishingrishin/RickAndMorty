@@ -1,4 +1,10 @@
-export function throttle(fn, delay = 250) {
+import type { Throttle } from '@/utils/types';
+
+// prettier-ignore
+export function throttle(
+  fn: Throttle,
+  delay: number = 250
+): Throttle {
   let wait = false;
 
   return (...args) => {
