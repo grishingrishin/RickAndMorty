@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import CharacterCard from '@/components/CharacterCard.vue';
+
 import type { Character } from '@/libs/types';
 
 type Props = {
