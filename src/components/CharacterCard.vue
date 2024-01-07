@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-const props = defineProps({
-	data: {
-		type: Object,
-		default: () => ({}),
-	},
-});
+import type { Character } from '@/libs/types';
+
+type Props = {
+	data: Character;
+};
+
+const props = defineProps<Props>();
 
 // prettier-ignore
-const episodeNumbers = computed(() => {
+const allEpisodes = computed<string>(() => {
 	const {
 		data: {
 			episodes
@@ -17,7 +18,7 @@ const episodeNumbers = computed(() => {
 	} = props;
 
 	if (!Array.isArray(episodes)) {
-		return [];
+		return '';
 	}
 
 	const res = episodes
@@ -44,8 +45,8 @@ const episodeNumbers = computed(() => {
 			<div class="character-card__status">
 				{{ data.status }}
 			</div>
-			<template v-if="episodeNumbers.length">
-				<div class="character-card__episodes">Episodes: {{ episodeNumbers }}</div>
+			<template v-if="allEpisodes">
+				<div class="character-card__episodes">Episodes: {{ allEpisodes }}</div>
 			</template>
 		</div>
 	</div>

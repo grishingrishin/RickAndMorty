@@ -1,23 +1,19 @@
 <script setup lang="ts">
 import CharacterCard from '@/components/CharacterCard.vue';
+import type { Character } from '@/libs/types';
 
-defineProps({
-	list: {
-		type: Array,
-		default: () => [],
-	},
-});
+type Props = {
+	list: Array<Character>;
+};
+
+defineProps<Props>();
 </script>
 
 <template>
 	<div class="character-list">
 		<template v-if="list.length">
 			<ul class="character-list__grid">
-				<li
-					v-for="item of list"
-					:key="item.id"
-					class="character-list__cell"
-				>
+				<li v-for="(item, idx) of list" :key="idx" class="character-list__cell">
 					<CharacterCard :data="item" />
 				</li>
 			</ul>
