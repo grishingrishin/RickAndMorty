@@ -10,7 +10,7 @@ type Props = {
 const props = defineProps<Props>();
 
 // prettier-ignore
-const allEpisodes = computed<string>(() => {
+const allEpisodes = computed(() => {
 	const {
 		data: {
 			episode

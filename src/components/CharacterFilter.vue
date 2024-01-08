@@ -2,25 +2,33 @@
 import { shallowReactive, computed, watch } from 'vue';
 
 import { filterDto } from '@/libs/dto';
+import type { FilterParams } from '@/libs/types';
 
-const props = defineProps({
-	value: {
-		type: Object,
-		default: null,
-	},
-});
+type FilterValues = Partial<FilterParams>;
 
-const emit = defineEmits(['apply', 'clear']);
+type Props = {
+	value: FilterParams;
+};
 
-const values = shallowReactive(init());
+type Emits = {
+	(e: 'apply', value: FilterValues): void;
+	(e: 'clear'): void;
+};
 
-const isActive = computed(() => {
-	return Object.keys(values).some(key => values[key]);
-});
+const props = defineProps<Props>();
 
-const isAutoClear = computed(() => {
-	return !isActive.value && props.value;
-});
+const emit = defineEmits<Emits>();
+
+const values = shallowReactive<FilterParams>(init());
+
+const isActive = computed(() =>
+	Object.keys(values).some(key => values[key as keyof FilterParams])
+);
+
+// prettier-ignore
+const isAutoClear = computed(() =>
+	!isActive.value && !!props.value
+);
 
 watch(isAutoClear, newVal => {
 	if (newVal) {
@@ -37,10 +45,12 @@ function apply() {
 	emit('apply', preparedValues);
 }
 
-function prepare(params) {
-	return Object.keys(params).reduce((acc, key) => {
-		if (params[key]) {
-			acc[key] = params[key];
+function prepare(params: FilterParams): FilterValues {
+	return Object.keys(params).reduce<FilterValues>((acc, key) => {
+		const curParam = key as keyof FilterParams;
+
+		if (params[curParam]) {
+			acc[curParam] = params[curParam];
 		}
 
 		return acc;
@@ -56,8 +66,10 @@ function clear() {
 	const defParams = filterDto();
 
 	Object.keys(defParams).forEach(key => {
-		if (Object.hasOwn(values, key)) {
-			values[key] = defParams[key];
+		const curParam = key as keyof FilterParams;
+
+		if (Object.hasOwn(values, curParam)) {
+			values[curParam] = defParams[curParam];
 		}
 	});
 }
