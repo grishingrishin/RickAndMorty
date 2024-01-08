@@ -13,15 +13,15 @@ const props = defineProps<Props>();
 const allEpisodes = computed<string>(() => {
 	const {
 		data: {
-			episodes
+			episode
 		}
 	} = props;
 
-	if (!Array.isArray(episodes)) {
+	if (!Array.isArray(episode)) {
 		return '';
 	}
 
-	const res = episodes
+	const res = episode
 		.map(episode => episode.replace(/\D/gi, ''))
 		.join(',');
 
@@ -33,7 +33,7 @@ const allEpisodes = computed<string>(() => {
 	<div class="character-card">
 		<div class="character-card__figure">
 			<img
-				:src="data.picture"
+				:src="data.image"
 				:alt="`Name: (${data.name})`"
 				class="character-card__img"
 			/>

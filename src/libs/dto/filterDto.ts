@@ -1,13 +1,8 @@
 import type { FilterParams } from '@/libs/types';
 
-type FilterDto = {
-  status?: string;
-  gender?: string;
-};
-
 // prettier-ignore
 export function filterDto(
-  params: FilterDto = {}
+  params: Partial<FilterParams> = {}
 ): FilterParams {
   return {
     status: params.status ?? '',

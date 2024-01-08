@@ -5,9 +5,9 @@ export type FilterParams = {
 
 export type Character = {
   id: number | null;
-  picture: string;
+  image: string;
   name: string;
   status: string;
   gender: string;
-  episodes: string[];
+  episode: string[];
 };
