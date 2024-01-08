@@ -8,27 +8,27 @@ describe('CharacterList', () => {
 		[
 			{
 				id: 1,
-				picture: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+				image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
 				name: 'Rick Sanchez',
 				status: 'Alive',
 				gender: 'Male',
-				episodes: ['https://rickandmortyapi.com/api/episode/1'],
+				episode: ['https://rickandmortyapi.com/api/episode/1'],
 			},
 			{
 				id: 2,
-				picture: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
+				image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
 				name: 'Morty Smith',
 				status: 'Alive',
 				gender: 'Male',
-				episodes: ['https://rickandmortyapi.com/api/episode/1'],
+				episode: ['https://rickandmortyapi.com/api/episode/1'],
 			},
 			{
 				id: 3,
-				picture: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg',
+				image: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg',
 				name: 'Summer Smith',
 				status: 'Alive',
 				gender: 'Female',
-				episodes: ['https://rickandmortyapi.com/api/episode/1'],
+				episode: ['https://rickandmortyapi.com/api/episode/1'],
 			},
 		],
 	];

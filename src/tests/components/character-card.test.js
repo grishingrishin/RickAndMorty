@@ -8,7 +8,7 @@ import CharacterCard from '@/components/CharacterCard.vue';
 describe('CharacterCard', () => {
 	const stubCharacter = {
 		id: 1,
-		picture: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+		image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
 		name: 'Rick Sanchez',
 		status: 'Alive',
 		gender: 'Male',
