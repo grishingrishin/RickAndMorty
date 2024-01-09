@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import { ref, computed, onBeforeMount, onMounted } from 'vue';
+import type { Ref } from 'vue'
 
 import { LOCAL_STORAGE_FILTER, API_URL } from '@/utils/constants';
 import { formatStr, injectParams } from '@/utils/helpers';
 import { characterDto } from '@/libs/dto';
+import type { Character } from '@/libs/types';
 
 import ScrollPagination from '@/components/ScrollPagination.vue';
 import CharacterFilter from '@/components/CharacterFilter.vue';
 import CharacterList from '@/components/CharacterList.vue';
 
-const characters = ref([]);
+const characters: Ref<Array<Character>> = ref([]);
 const filtersApplied = ref(null);
 const isFetchingPage = ref(false);
 const curPage = ref(1);
