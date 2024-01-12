@@ -63,7 +63,7 @@ async function fetchCharacters() {
 	const endpoint = new URL(API_URL);
 
 	injectParams(endpoint, {
-		page: curPage.value,
+		page: curPage.value.toString(),
 	});
 
 	const response = await window.fetch(endpoint);
