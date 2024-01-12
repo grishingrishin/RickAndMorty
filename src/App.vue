@@ -40,7 +40,7 @@ function init() {
 
 function restoreFilter() {
 	if (window.localStorage.getItem(LOCAL_STORAGE_FILTER)) {
-		filtersApplied.value = JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_FILTER));
+		filtersApplied.value = JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_FILTER) as string);
 	}
 }
 
