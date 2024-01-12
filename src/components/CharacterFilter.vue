@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" generic="T">
 import { shallowReactive, computed, watch } from 'vue';
 
 import { filterDto } from '@/libs/dto';
@@ -7,7 +7,7 @@ import type { FilterParams } from '@/libs/types';
 type FilterValues = Partial<FilterParams>;
 
 type Props = {
-	value: FilterParams;
+	value: T;
 };
 
 type Emits = {
