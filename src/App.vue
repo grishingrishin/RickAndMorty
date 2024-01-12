@@ -5,14 +5,14 @@ import type { Ref } from 'vue'
 import { LOCAL_STORAGE_FILTER, API_URL } from '@/utils/constants';
 import { formatStr, injectParams } from '@/utils/helpers';
 import { characterDto } from '@/libs/dto';
-import type { Character } from '@/libs/types';
+import type { Character, FilterParams } from '@/libs/types';
 
 import ScrollPagination from '@/components/ScrollPagination.vue';
 import CharacterFilter from '@/components/CharacterFilter.vue';
 import CharacterList from '@/components/CharacterList.vue';
 
 const characters: Ref<Array<Character>> = ref([]);
-const filtersApplied = ref(null);
+const filtersApplied: Ref<Partial<FilterParams> | null> = ref(null);
 const isFetchingPage = ref(false);
 const curPage = ref(1);
 const isLastPage = ref(false);
@@ -44,7 +44,7 @@ function restoreFilter() {
 	}
 }
 
-function applyFilter(params) {
+function applyFilter(params: Partial<FilterParams>) {
 	window.localStorage.setItem(LOCAL_STORAGE_FILTER, JSON.stringify(params));
 	filtersApplied.value = params;
 }
