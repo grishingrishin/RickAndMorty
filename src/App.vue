@@ -22,9 +22,17 @@ const filteredCharacters = computed(() => {
 		return [];
 	}
 
+	const hasParam = (
+		target: Character,
+		params: Partial<FilterParams>,
+		key: keyof FilterParams
+	) => {
+		return formatStr(target[key]) === formatStr(params[key] as string)
+	}
+
 	const filtered = characters.value.filter(character => {
-		return Object.keys(filtersApplied.value).every(key => {
-			return formatStr(character[key]) === formatStr(filtersApplied.value[key]);
+		return Object.keys(filtersApplied.value as Partial<FilterParams>).every(key => {
+			return hasParam(character, filtersApplied.value as Partial<FilterParams>, key as keyof FilterParams)
 		});
 	});
 
