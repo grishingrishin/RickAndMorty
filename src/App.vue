@@ -27,12 +27,13 @@ const filteredCharacters = computed(() => {
 		params: Partial<FilterParams>,
 		key: keyof FilterParams
 	) => {
-		return formatStr(target[key]) === formatStr(params[key] as string)
+		return formatStr(target[key]) === formatStr(params[key] as string);
 	}
 
+	// prettier-ignore
 	const filtered = characters.value.filter(character => {
 		return Object.keys(filtersApplied.value as Partial<FilterParams>).every(key => {
-			return hasParam(character, filtersApplied.value as Partial<FilterParams>, key as keyof FilterParams)
+			return hasParam(character, filtersApplied.value as Partial<FilterParams>, key as keyof FilterParams);
 		});
 	});
 
