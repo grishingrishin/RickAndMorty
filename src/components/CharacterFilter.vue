@@ -17,7 +17,7 @@ const props = defineProps<Props>();
 
 const emit = defineEmits<Emits>();
 
-const values = shallowReactive<FilterParams>(init());
+const values: FilterParams = shallowReactive(init());
 
 const isActive = computed(() =>
 	Object.keys(values).some(key => values[key as keyof FilterParams])
