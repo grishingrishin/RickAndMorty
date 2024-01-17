@@ -4,14 +4,12 @@ import { shallowReactive, computed, watch } from 'vue';
 import { filterDto } from '@/libs/dto';
 import type { FilterParams } from '@/libs/types';
 
-type FilterValues = Partial<FilterParams>;
-
 type Props = {
 	value: T;
 };
 
 type Emits = {
-	(e: 'apply', value: FilterValues): void;
+	(e: 'apply', value: Partial<FilterParams>): void;
 	(e: 'clear'): void;
 };
 
@@ -45,8 +43,8 @@ function apply() {
 	emit('apply', preparedValues);
 }
 
-function prepare(params: FilterParams): FilterValues {
-	return Object.keys(params).reduce<FilterValues>((acc, key) => {
+function prepare(params: FilterParams): Partial<FilterParams> {
+	return Object.keys(params).reduce<Partial<FilterParams>>((acc, key) => {
 		const curParam = key as keyof FilterParams;
 
 		if (params[curParam]) {
