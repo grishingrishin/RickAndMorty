@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onBeforeMount, onMounted } from 'vue';
-import type { Ref } from 'vue';
+import { ref, computed, onBeforeMount, onMounted, type Ref } from 'vue';
 
 import { LOCAL_STORAGE_FILTER, API_URL } from '@/utils/constants';
 import { formatStr, injectParams } from '@/utils/helpers';
