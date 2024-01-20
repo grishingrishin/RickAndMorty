@@ -7,7 +7,9 @@ type Props = {
 	data: Character;
 };
 
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+	data: () => ({} as Character)
+});
 
 // prettier-ignore
 const allEpisodes = computed(() => {

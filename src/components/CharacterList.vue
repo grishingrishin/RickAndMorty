@@ -7,7 +7,9 @@ type Props = {
 	list: Array<Character>;
 };
 
-defineProps<Props>();
+withDefaults(defineProps<Props>(), {
+	list: () => [] as Array<Character>,
+});
 </script>
 
 <template>
