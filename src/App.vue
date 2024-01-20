@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onBeforeMount, onMounted } from 'vue';
-import type { Ref } from 'vue'
+import type { Ref } from 'vue';
 
 import { LOCAL_STORAGE_FILTER, API_URL } from '@/utils/constants';
 import { formatStr, injectParams } from '@/utils/helpers';
@@ -25,17 +25,19 @@ const filteredCharacters = computed(() => {
 	const hasParam = (
 		target: Character,
 		params: Partial<FilterParams>,
-		key: keyof FilterParams
-	) => {
-		return formatStr(target[key]) === formatStr(params[key] as string);
-	}
+		key: keyof FilterParams,
+	) => formatStr(target[key]) === formatStr(params[key] as string);
 
-	// prettier-ignore
-	const filtered = characters.value.filter(character => {
-		return Object.keys(filtersApplied.value as Partial<FilterParams>).every(key => {
-			return hasParam(character, filtersApplied.value as Partial<FilterParams>, key as keyof FilterParams);
-		});
-	});
+	// NEED REFACTORING
+	const filtered = characters.value.filter(character =>
+		Object.keys(filtersApplied.value as Partial<FilterParams>).every(key =>
+			hasParam(
+				character,
+				filtersApplied.value as Partial<FilterParams>,
+				key as keyof FilterParams,
+			),
+		),
+	);
 
 	return filtered;
 });
@@ -49,7 +51,9 @@ function init() {
 
 function restoreFilter() {
 	if (window.localStorage.getItem(LOCAL_STORAGE_FILTER)) {
-		filtersApplied.value = JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_FILTER) as string);
+		filtersApplied.value = JSON.parse(
+			window.localStorage.getItem(LOCAL_STORAGE_FILTER) as string,
+		);
 	}
 }
 
