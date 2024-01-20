@@ -1,9 +1,10 @@
 import path from 'path';
 import { defineConfig } from 'vitest/config';
 import vue from '@vitejs/plugin-vue';
+import eslint from 'vite-plugin-eslint';
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), eslint()],
   resolve: {
     alias: [
       {
