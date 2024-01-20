@@ -20,7 +20,7 @@ const emit = defineEmits<Emits>();
 const values: FilterParams = shallowReactive(init());
 
 const isActive = computed(() =>
-	Object.keys(values).some(key => values[key as keyof FilterParams])
+	Object.keys(values).some(key => values[key as keyof FilterParams]),
 );
 
 // prettier-ignore

@@ -5,7 +5,7 @@ import { throttle } from '@/utils/helpers';
 
 type Props = {
 	disabled: boolean;
-}
+};
 
 type Emits = {
 	(e: 'update'): void;

@@ -11,7 +11,7 @@ beforeEach(() => {
 	vi.spyOn(global, 'fetch').mockImplementation(fetchSpy(getMockCharacters()));
 
 	function fetchSpy(data) {
-		return function (_url) {
+		return function () {
 			return new Promise(resolve => {
 				resolve({
 					json: () =>

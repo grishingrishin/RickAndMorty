@@ -8,7 +8,7 @@ type Props = {
 };
 
 const props = withDefaults(defineProps<Props>(), {
-	data: () => ({} as Character)
+	data: () => ({}) as Character,
 });
 
 // prettier-ignore
@@ -24,7 +24,7 @@ const allEpisodes = computed(() => {
 	}
 
 	const res = episode
-		.map(episode => episode.replace(/\D/gi, ''))
+		.map(item => item.replace(/\D/gi, ''))
 		.join(',');
 
 	return res;
@@ -34,11 +34,7 @@ const allEpisodes = computed(() => {
 <template>
 	<div class="character-card">
 		<div class="character-card__figure">
-			<img
-				:src="data.image"
-				:alt="`Name: (${data.name})`"
-				class="character-card__img"
-			/>
+			<img :src="data.image" :alt="`Name: (${data.name})`" class="character-card__img" />
 		</div>
 		<div class="character-card__body">
 			<div class="character-card__name">

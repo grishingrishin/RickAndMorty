@@ -1,6 +1,6 @@
 type SearchParams = {
-  [key: string]: string
-}
+  [key: string]: string;
+};
 
 // prettier-ignore
 export function injectParams(
