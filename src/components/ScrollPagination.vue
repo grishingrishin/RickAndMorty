@@ -1,7 +1,15 @@
-<script setup>
+<script setup lang="ts">
 import { onMounted, onUnmounted } from 'vue';
 
 import { throttle } from '@/utils/helpers';
+
+type Props = {
+	disabled: boolean;
+}
+
+type Emits = {
+	(e: 'update'): void;
+};
 
 const GLOBAL_EVENTS = [
 	{
@@ -20,14 +28,9 @@ const GLOBAL_EVENTS = [
 
 const THRESHOLD_PART = 4;
 
-const props = defineProps({
-	disabled: {
-		type: Boolean,
-		default: false,
-	},
-});
+const props = defineProps<Props>();
 
-const emit = defineEmits(['update']);
+const emit = defineEmits<Emits>();
 
 onMounted(addEventListeners);
 onUnmounted(removeEventListeners);

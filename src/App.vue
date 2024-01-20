@@ -1,16 +1,18 @@
-<script setup>
+<script setup lang="ts">
 import { ref, computed, onBeforeMount, onMounted } from 'vue';
+import type { Ref } from 'vue'
 
 import { LOCAL_STORAGE_FILTER, API_URL } from '@/utils/constants';
 import { formatStr, injectParams } from '@/utils/helpers';
 import { characterDto } from '@/libs/dto';
+import type { Character, FilterParams } from '@/libs/types';
 
 import ScrollPagination from '@/components/ScrollPagination.vue';
 import CharacterFilter from '@/components/CharacterFilter.vue';
 import CharacterList from '@/components/CharacterList.vue';
 
-const characters = ref([]);
-const filtersApplied = ref(null);
+const characters: Ref<Array<Character>> = ref([]);
+const filtersApplied: Ref<Partial<FilterParams> | null> = ref(null);
 const isFetchingPage = ref(false);
 const curPage = ref(1);
 const isLastPage = ref(false);
@@ -20,9 +22,18 @@ const filteredCharacters = computed(() => {
 		return [];
 	}
 
+	const hasParam = (
+		target: Character,
+		params: Partial<FilterParams>,
+		key: keyof FilterParams
+	) => {
+		return formatStr(target[key]) === formatStr(params[key] as string);
+	}
+
+	// prettier-ignore
 	const filtered = characters.value.filter(character => {
-		return Object.keys(filtersApplied.value).every(key => {
-			return formatStr(character[key]) === formatStr(filtersApplied.value[key]);
+		return Object.keys(filtersApplied.value as Partial<FilterParams>).every(key => {
+			return hasParam(character, filtersApplied.value as Partial<FilterParams>, key as keyof FilterParams);
 		});
 	});
 
@@ -38,11 +49,11 @@ function init() {
 
 function restoreFilter() {
 	if (window.localStorage.getItem(LOCAL_STORAGE_FILTER)) {
-		filtersApplied.value = JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_FILTER));
+		filtersApplied.value = JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_FILTER) as string);
 	}
 }
 
-function applyFilter(params) {
+function applyFilter(params: Partial<FilterParams>) {
 	window.localStorage.setItem(LOCAL_STORAGE_FILTER, JSON.stringify(params));
 	filtersApplied.value = params;
 }
@@ -61,7 +72,7 @@ async function fetchCharacters() {
 	const endpoint = new URL(API_URL);
 
 	injectParams(endpoint, {
-		page: curPage.value,
+		page: curPage.value.toString(),
 	});
 
 	const response = await window.fetch(endpoint);

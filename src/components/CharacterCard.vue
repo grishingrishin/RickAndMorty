@@ -1,26 +1,29 @@
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue';
 
-const props = defineProps({
-	data: {
-		type: Object,
-		default: () => ({}),
-	},
+import type { Character } from '@/libs/types';
+
+type Props = {
+	data: Character;
+};
+
+const props = withDefaults(defineProps<Props>(), {
+	data: () => ({} as Character)
 });
 
 // prettier-ignore
-const episodeNumbers = computed(() => {
+const allEpisodes = computed(() => {
 	const {
 		data: {
-			episodes
+			episode
 		}
 	} = props;
 
-	if (!Array.isArray(episodes)) {
-		return [];
+	if (!Array.isArray(episode)) {
+		return '';
 	}
 
-	const res = episodes
+	const res = episode
 		.map(episode => episode.replace(/\D/gi, ''))
 		.join(',');
 
@@ -32,7 +35,7 @@ const episodeNumbers = computed(() => {
 	<div class="character-card">
 		<div class="character-card__figure">
 			<img
-				:src="data.picture"
+				:src="data.image"
 				:alt="`Name: (${data.name})`"
 				class="character-card__img"
 			/>
@@ -44,8 +47,8 @@ const episodeNumbers = computed(() => {
 			<div class="character-card__status">
 				{{ data.status }}
 			</div>
-			<template v-if="episodeNumbers.length">
-				<div class="character-card__episodes">Episodes: {{ episodeNumbers }}</div>
+			<template v-if="allEpisodes">
+				<div class="character-card__episodes">Episodes: {{ allEpisodes }}</div>
 			</template>
 		</div>
 	</div>
