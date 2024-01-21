@@ -33,14 +33,14 @@ withDefaults(defineProps<Props>(), {
 .character-list {
 	&__grid {
 		display: grid;
-		gap: 14px;
 		grid-template-columns: 1fr;
+		gap: 14px;
 
-		@media (min-width: 768px) {
+		@media (width >= 768px) {
 			grid-template-columns: repeat(2, 1fr);
 		}
 
-		@media (min-width: 1024px) {
+		@media (width >= 1024px) {
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}

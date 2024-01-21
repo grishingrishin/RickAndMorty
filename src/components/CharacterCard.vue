@@ -53,21 +53,21 @@ const allEpisodes = computed(() => {
 <style lang="scss">
 .character-card {
 	display: flex;
-	min-height: 320px;
-	gap: 14px;
 	flex-direction: column;
+	gap: 14px;
+	min-height: 320px;
 	padding: 14px;
 
 	&__body {
 		display: flex;
-		gap: 6px;
 		flex-direction: column;
+		gap: 6px;
 	}
 
 	&__img {
 		width: 100%;
-		aspect-ratio: 1.1;
 		object-fit: cover;
+		aspect-ratio: 1.1;
 	}
 
 	&__episodes {
